@@ -1,0 +1,109 @@
+.font_14_sc_me {
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #999999;
+  text-align: center;
+}
+
+.font_daily_today {
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #333333;
+  text-align: center;
+  line-height: 12px;
+}
+
+.font_12_sc {
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #8B572A;
+  text-align: center;
+}
+
+.font_12_18_sc {
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #B8A588;
+  line-height: 18px;
+}
+
+.font_14_14_sc_me {
+  font-family: PingFangSC-Medium;
+  font-size: 14px;
+  color: #8B572A;
+  text-align: center;
+  line-height: 14px;
+}
+
+.font_14_20_sc_me {
+  font-family: PingFangSC-Medium;
+  font-size: 14px;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 20px;
+}
+
+.font_12_sc_re {
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #5A96FF;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 12px;
+}
+
+.font_16_sc_re {
+  font-family: PingFangSC-Regular;
+  font-size: 16px;
+  color: #000000;
+  line-height: 16px;
+}
+
+.font_30_sc_re {
+  font-family: PingFangSC-Regular;
+  font-size: 30px;
+  color: #000000;
+  line-height: 30px;
+}
+
+.sc_me {
+  font-family: PingFangSC-Medium;
+}
+
+.sc_re {
+  font-family: PingFangSC-Regular;
+}
+
+.brown {
+  color: #8B572A;
+}
+
+.s16 {
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.s15 {
+  font-size: 15px;
+  line-height: 15px;
+}
+
+.s14 {
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.s12 {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.s13 {
+  font-size: 13px;
+  line-height: 13px;
+}
+
+.s11 {
+  font-size: 11px;
+  line-height: 12px;
+}

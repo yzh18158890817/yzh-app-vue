@@ -1,0 +1,598 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #F0F0F0;
+  color: #555;
+  font-size: 16px;
+  font-family: "PingFangSC-Regular", "Microsoft YaHei", "Arial", "黑体", "宋体", sans-serif;
+}
+
+td, th, caption {
+  font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 100%;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+a {
+  color: #555;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  border: none;
+  vertical-align: middle;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+input, textarea, select, button {
+  /*font: 14px  "Microsoft YaHei", "Arial","黑体", "宋体", sans-serif;*/
+  border: 0;
+  outline: none;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+select {
+  /*兼容苹果手机*/
+  /*-webkit-appearance: none;*/
+  /*border: 1px solid #EBEBEB;*/
+  /*防止紧紧靠在边上*/
+  /*text-indent: 2px;
+  background-color: transparent;
+  background: url("../../img/tri-down.png")no-repeat right;*/
+  /*注：上一步清除样式后，select中的三角符号也会被清除，所以需要自己添加下三角，我在此出用一个下三角背景图片填充*/
+  /*background-size: 0.3rem;
+  background-position-x: 96%;
+  border-radius: 0px;*/
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  /*overflow-y: scroll;*/
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: inline-block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix {
+  clear: both;
+  height: 0.01rem;
+  *zoom: 1;
+}
+
+/*公共类*/
+.fl {
+  float: left
+}
+
+.fr {
+  float: right
+}
+
+.al {
+  text-align: left
+}
+
+.ac {
+  text-align: center
+}
+
+.ar {
+  text-align: right
+}
+
+.hide {
+  display: none !important;
+}
+
+.hidden {
+  display: none;
+}
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}
+
+/*! normalize.css v2.1.2 | MIT License | git.io/normalize */
+/*
+/*! 我就是自己看看，然后翻译下下，让大家看看 */
+
+/* ==========================================================================
+   HTML5 display definitions
+
+   HTML5 新增元素定义
+
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined in IE 8/9.
+ *
+ * 修正IE 8/9 中未定义的块级元素。
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ *
+ * 修正在 IE 8/9 中未定义的 'inline-block' 元素。
+ */
+
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ *
+ * 阻止现在浏览器显示未定义 control 播放控件的 'audio' 声音元素。
+ * 删除 IOS 5 设备中显示的多余的高度。
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ *
+ * 处理 IE 8/9 中不存在的样式。
+ */
+
+[hidden] {
+  display: none;
+}
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ *
+ * 处理在 IE 8/9, Safari 5, 及 Chrome 没有的样式。
+ */
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ *
+ * 处理　Firefox　与其它浏览器的差异。
+ */
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ *
+ * 处理在 IE 8/9 中没有的样式。
+ */
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ *
+ * 修正确 Safari 5 和 Chrome 中古怪的默认字体。
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ *
+ * 为所有浏览器改善预格式化文本的可读性。
+ */
+
+pre {
+  white-space: pre-wrap;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ *
+ * 修正 IE 9 中显示古怪的溢出内容。
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+
+   Figure 图像/图表/代码等
+   ========================================================================== */
+
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ *
+ * 处理在 IE 8/9 和 Safari 5 没有的边距。
+ */
+
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+/**
+ * Define consistent border, margin, and padding.
+ *
+ * 定义一致的边框、外边距及内边距。
+ */
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ * 1. 修正在　IE 8/9 中没有继承的 'color'.
+ *
+ *    [译者注：说是修正颜色嘛，可下面没有关于颜色的呀，这也行？求大神解释！]
+ * 2. 去掉内边距，避免当用户清空表单组时认为出错了。
+ */
+
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ *
+ * 重置不可用元素的默认光标样式。
+ */
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ *
+ * 1. 处理 IE 8/9 中设置为 'content-box' 的盒子模型。
+ * 2. 删除 IE 8/9 中多余的内边距。
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ *
+ * 1. 处理 Safari 5 和 Chrome 中默认设置为 'appearance' 的 'searchfield'.
+ * 2. 处理 Safari 5 和 Chrome 中默认设置为 'box-sizing' 的 'border-box'
+ *    (包括不会过时的 '-moz').
+ */
+
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ *
+ * 删除 Safari 5 和 OS X 上的 Chrome 中的输入框上的内边距和搜索取消按钮。
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ *
+ * 删除 Firefox 4+ button 与 input 上的内边距。
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ *
+ * 1. 删除 IE8/9 中默认的垂直滚动条。
+ * 2. 改善所有浏览器中的可读性并使文本垂直对齐。
+ */
+
+textarea {
+  overflow: auto; /* 1 */
+  vertical-align: top; /* 2 */
+}
+
+/**
+ *  分隔线
+ */
+.panel-line {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid #999999
+}
+
+.mr {
+  margin-right: 5px;
+}
+
+/*@media screen and (min-width:1024px){
+    html{
+        font-size: 53.33px!important;
+    }
+}
+
+@media screen and (min-width:1280px){
+    html{
+        font-size: 66.66px!important;
+    }
+}
+
+@media screen and (min-width:1366px){
+    html{
+        font-size: 71.14583px!important;
+    }
+}
+
+@media screen and (min-width:1440px){
+    html{
+        font-size: 75px!important;
+    }
+}
+
+@media screen and (min-width:1600px){
+    html{
+        font-size: 83.33px!important;
+    }
+}
+
+@media screen and (min-width:1920px){
+    html{
+        font-size: 100px!important;
+    }
+}
+
+@media screen and (width: 1920px) {
+    html{
+        font-size: 100px;
+        min-width: 100%;
+    }
+}*/
+.re {
+  position: relative;
+}
+
+.ab {
+  position: absolute;
+}
+
+.full_w {
+  width: 100%;
+}
+.bg {
+  background: #F8F8F8;
+}
+
+.mtop_0 {
+  margin-top: 0;
+}
+
+.mbottom_0 {
+  margin-bottom: 0;
+}
+
+.bottom_0 {
+  bottom: 0;
+}
+
+.r {
+  right: 0
+}
+
+.left_0 {
+  left: 0;
+}
+
+.bw {
+  background: white;
+}
+
+.body {
+  background: #F8F8F8;
+  width: 100%;
+}
+
+.my_setup {
+
+}
+
+.bor {
+  border: red solid 1px;
+}
+
+.black {
+  color: #000000;
+}
+.gray{
+  color: #999;
+}
+
+.w_92 {
+  width: 92.5%;
+}
+
+.m_l_3 {
+  margin-left: 3.75%;
+}
+
+.m_l_13 {
+  margin-left: 10%;
+}
+
+.m_l_40 {
+  margin-left: 40%;
+}
+
+
+.m_r_3 {
+  margin-right: 3.75%;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+}
+
+.m_top_3 {
+  margin-top: 3%;
+}.m_top_1 {
+  margin-top: 1%;
+}
+
+.m_top_10 {
+  margin-top: 10%;
+}
+
+.m_top_8 {
+  margin-top: 8%;
+}
+.m_b_60{height: 60px;background: #F8F8F8}
+
+.mt_65 {
+  margin-top: 65%;
+}
+.h_30{
+  height: 30px;
+  line-height: 30px;
+}
+.h_60{
+  height: 60px;
+  line-height: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
